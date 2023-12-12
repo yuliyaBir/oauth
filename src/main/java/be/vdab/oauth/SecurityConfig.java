@@ -13,7 +13,7 @@ public class SecurityConfig {
         http.oauth2Login(Customizer.withDefaults());
         http.authorizeHttpRequests(requests ->
                 requests.requestMatchers("/", "/index.html").permitAll()
-                        .requestMatchers("beveiligd.html", "/user", "/beveiligd.js").authenticated());
+                        .requestMatchers("beveiligd.html", "/user", "js/beveiligd.js").authenticated());
         return http.build();
     }
 }
